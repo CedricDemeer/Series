@@ -1,0 +1,19 @@
+body{
+    background-color: bisque;
+}
+.alert{
+    padding: 20px;
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+.alert-success{
+    background-color: darkgreen;
+}
+.alert-error {
+    background-color: #B0413E;
+}
+.alert-reset_password_error {
+    background-color: #B0413E;
+}

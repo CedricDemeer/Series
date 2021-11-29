@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+    <h2>Our series!</h2>
+    {#  todo: afficher la liste des séries #}
+    {% for serie in series %}
+    <div class="serie">
+        <a href="{{ path('serie_detail', {'id': serie.id}) }}">{{ serie.name }}</a>
+        {{ serie.seasons|length }} season(s)
+    </div>
+    {% endfor %}
+
+{% endblock %}
+{% block title %}Our series! | {{ parent() }}
+{% endblock %}

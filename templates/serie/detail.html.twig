@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+{% block main %}
+    <h2>{{ serie.name }}</h2>
+    {#  todo: afficher les detail de la serie #}
+    <div>
+        {{ serie.overview }}
+    </div>
+    <div>
+        {{ serie.genres }}
+    </div>
+    <div>
+    {% for season in serie.seasons %}
+        <div class="season">
+            <h3>{{ season.number }}</h3>
+            <p> {{ season.overview }} </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block title %}{{ serie.name }} | {{ parent() }}
+{% endblock %}

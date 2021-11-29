@@ -1,0 +1,17 @@
+{% extends  'layout.html.twig'%}
+{% block main %}
+<h1>home!!!</h1>
+{% if app.user %}
+<h3>Bonjour {{ app.user.lastname }} !</h3>
+{% endif %}    
+
+
+<p>il y a {{ productsCount }} produits disponible</p>
+    {%  for s in series %}
+    <p>{{ loop.index }} : {{ s }}</p>
+    {% endfor %}
+
+{% endblock %}
+{% block title %}
+    Series! | Home
+{% endblock %}

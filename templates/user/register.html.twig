@@ -1,0 +1,12 @@
+<!--PAS UTILISER 4.4-->
+{% extends "layout.html.twig" %}
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block main %}
+    {{ form_start(Formulaire) }}
+    {{ form_widget(Formulaire) }}
+    <button type="submit">Register!</button>
+    {{ form_end(Formulaire) }}
+{% endblock %}

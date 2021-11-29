@@ -1,0 +1,34 @@
+{% extends  'layout.html.twig'%}
+{% block main %}
+<h1>Test twig</h1>
+    {{ content }}
+    {{ content|raw }}
+    {{ content|striptags }}
+{% set yo = "bla" %}
+
+{# affiche la varible #}
+<p>{{  yo }}</p>
+
+{% set colors = ['red','blue','brown','black'] %}
+<ul>
+    {% for color in colors %}
+        {% if color != 'brown' %}
+        <li>{{ color|upper }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<ul>
+    {% for color in colors %}
+{#  {% if color != 'brown' %}#}
+            <li>{{ color|capitalize }}</li>
+{#  {% endif %}#}
+    {% endfor %}
+</ul>
+{% set numb = 1287.25478954545855 %}
+<p>{{ numb|number_format(2, ',', '&nbsp')|raw }}</p>
+<p>{{ numb|round(2) }}</p>
+{% endblock %}
+
+{% block title %}
+    Series! | Test
+{% endblock %}
