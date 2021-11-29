@@ -2,4 +2,4 @@
 Application de saison et series TV
 
 ## Techno
-Symfony
+Symfony 5.2
